@@ -16,9 +16,10 @@ spec:
   lifecycle: experimental
   system: isd-system
   definition: |
-    version: 1.0.0
     openapi: 3.0.0
-    title: Ministry of Economy, Trade and Industry API
+    info:
+      version: 1.0.0
+      title: Ministry of Economy, Trade and Industry API
     servers:
       - url: https://api.spklab-isd.com/
     paths:
