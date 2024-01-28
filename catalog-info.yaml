@@ -19,7 +19,7 @@ spec:
     openapi: 3.0.0
     info:
       version: 1.0.0
-      title: Ministry of Economy, Trade and Industry API
+    title: Ministry of Economy, Trade and Industry API
     servers:
       - url: https://api.spklab-isd.com/
     paths:
