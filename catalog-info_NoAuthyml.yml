@@ -1,0 +1,55 @@
+iapiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: API_gbiz_NoAuth
+  tags: ['apisix']
+  description: |
+    APISIXにある、経済産業省gbiz API
+  links:
+    - title: Management
+      url: https://mgmt.api.spklab-isd.com
+    - title: Documentation
+      url: https://backstage.spklab-isd.com/docs/default/Component/apisix
+spec:
+  type: openapi
+  owner: group:default/team-devops
+  lifecycle: experimental
+  system: isd-system
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+    title: Ministry of Economy, Trade and Industry API
+    servers:
+      - url: https://api.spklab-isd.com/
+    paths:
+      /gbiz-noauth?corporate_number={corporate_num}&page={page_num}&limit={limit}:
+       get:
+         operationId: 20231205_経済産業省gBizINFOGET
+         summary: Get a user
+         parameters:
+           - in: path
+             name: corporate_num
+             required: true
+             description: 法人番号
+             schema:
+               type: integer
+               example: "2460101003085"
+           - in: path
+             name: page_num
+             required: true
+             description: ページ番号
+             schema:
+               type: integer
+               example: "1"
+           - in: path
+             name: limit
+             required: true
+             description: APIでのLimit数
+             schema:
+               type: integer
+               example: "1000"
+         responses:
+           200:
+             description: Success
+             
