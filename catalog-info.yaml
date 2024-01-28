@@ -17,7 +17,7 @@ spec:
   system: isd-system
   definition: |
     openapi: "3.0.0"
-    version: 1.0.0
+    apiVersion: 1.0.0
     title: Ministry of Economy, Trade and Industry API
     servers:
       - url: https://api.spklab-isd.com/
